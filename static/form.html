@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+        <title>Form LAB3</title>
+    </head>
+    <!-- <script src="../index.js"></script> -->
+    
+    <body>
+        <!-- 1. -->
+        <form action="/form1" method="POST">
+            <p>Vezessen be egy vendeglot</p>
+
+            <label>Varos</label><br>
+            <input type="text" name="form_varos" id="form_varos" pattern="[A-Z][a-z]*" placeholder="Kolozsvar" required><br><br>
+
+            <label>Utca</label><br>
+            <input type="text" name="form_utca" id="form_utca" pattern="[A-Z][a-z]*" placeholder="Farkas" required><br><br>
+
+            <label>Szam</label><br>
+            <input type="number" name="form_szam" id="form_szam" placeholder="1" required><br><br>
+
+            <label>Telefonszam</label><br>
+            <input type="tel" name="form_telefon" id="form_telefon" pattern="[0-9]{10}" placeholder="0xxxxxxxxx" required><br><br>
+
+            <label>Nyitvatartas</label><br>
+
+            <input type="number" name="form_nyitas" id="form_nyitas" placeholder="9" required>            
+            <label> - </label>
+            <input type="number" name="form_zaras" id="form_zaras" placeholder="22" required><br><br>
+
+            <input type="submit" name="form_submit1" id="form_submit1" value="SUBMIT"><br><br><br>
+        </form>
+
+        <!-- 2. -->
+        <form name="Kepek feltoltese" enctype="multipart/form-data" action="/form2" method="POST">
+            <p>Tegyen fel kepeket egy vendeglohoz</p>
+
+            <label>A vendeglo ID-ja, ahova a kepet akarja feltolteni </label>
+            <input type="number" id="kliens_id" name="kliens_id" placeholder="1"><br>
+
+            <label>Kep feltoltese</label>
+            <input type="file" id="kliens_file" name="kliens_file" required><br><br>
+            <input type="submit" id="form_submit2" value="SUBMIT"><br><br><br>
+        </form>
+
+        <!-- 3. -->
+        <form name="Foglalas" action="/form3" method="POST">
+            <p>Foglaljon egy asztalt</p>
+            <label>Nev</label><br>
+            <input type="text" id="form_kliens_name" name="form_kliens_name" pattern="[A-Z][a-z]*" placeholder="Example" required><br><br>
+
+            <label>A vendeglo ID-ja</label><br>
+            <input type="number" id="form_kliens_id" name="form_kliens_id" placeholder="1" required><br><br>
+
+            <label>Idopont</label><br>
+            <input type="number" id="form_kliens_idopont" name="form_kliens_idopont" placeholder="14" required><br><br>
+            
+            <input type="submit" id="form_submit3" value="SUBMIT"><br><br><br>
+        </form>
+
+        <footer><div id="f_footer"></div></footer>
+
+    </body>

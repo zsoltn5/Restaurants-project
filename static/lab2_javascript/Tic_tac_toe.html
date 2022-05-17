@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <title>TIC TAC TOE</title>
+    </head>
+
+<body>
+
+    <div id="main">
+        <h1>TIC TAC TOE</h1>
+   
+        <br>
+        <input type="text" id="b1" onclick="lepes('b1'); checkWinner();" readonly>
+        <input type="text" id="b2" onclick="lepes('b2'); checkWinner();" readonly>
+        <input type="text" id="b3" onclick="lepes('b3'); checkWinner();" readonly>
+        <br>
+        <input type="text" id="b4" onclick="lepes('b4'); checkWinner();" readonly>    
+        <input type="text" id="b5" onclick="lepes('b5'); checkWinner();" readonly>
+        <input type="text" id="b6" onclick="lepes('b6'); checkWinner();" readonly>
+        <br>
+        <input type="text" id="b7" onclick="lepes('b7'); checkWinner();" readonly>
+        <input type="text" id="b8" onclick="lepes('b8'); checkWinner();" readonly>
+        <input type="text" id="b9" onclick="lepes('b9'); checkWinner();" readonly>
+        <br>
+    </div>
+    
+    <div id="turn"><h1>Please start the game</h1></div>
+
+    <div id="buttondiv">
+        <h1>---</h1>
+        <button id="button" onclick="resetf()">
+            RESET
+        </button>
+    </div>
+
+    
+
+    <script src="tic_tac_toe.js"></script>
+</body>
+   
+</html>

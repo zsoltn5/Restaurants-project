@@ -1,0 +1,177 @@
+/* Nistor Zsolt
+    523/2 */
+
+
+/* LAB 2 */
+
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9{
+    /* align-self: center; */
+    width: 100px; height: 60px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#main,#buttondiv,#turn,form,footer{
+    text-align: center;
+}
+
+#url_,#email_{
+    color: rgb(253, 47, 47);
+}
+/*  */
+
+
+
+
+
+/* p es em mind a hatter, mind az iras ugyanolyan szinu */
+p,em {
+    background-color: aqua;
+    color: aqua;
+}
+
+/* szoveggel egyutt gordulo hatterkep */
+body { 
+    background-image: url("https://blog.cloudflare.com/content/images/2019/12/gradient.jpg");
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+}
+
+/* listak customizalasa classekkel */
+ol.eletciklus{
+    font-size: 1rem;
+    font-style: italic;
+    color:aqua;
+}
+
+ol.dinolista{
+    font-size: 1.5rem;
+    font-style: inherit;
+    color:rgb(225, 0, 255);
+}
+/*  */
+
+/* egy sectionben levo h2 utan kovetkezo ol */
+section h2 + ol{
+    color: rgb(255, 230, 0) !important; 
+    list-style-type: lower-latin;
+}
+
+/* h1 es h2 ugyanolyan stilusokkal rendelkezik */
+h1,h2{
+    font: 1.5em sans-serif;
+    color: antiquewhite;
+}
+
+
+/* Link tipus definialasa */
+a.link:active {
+    color: rgb(255, 0, 0);
+    font-weight: normal;
+    font-size: 20px;
+  }
+  
+a.link:visited {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+}
+  
+a.link:hover {
+    color: rgb(0, 204, 255);
+    font-weight: italic;
+    font-size: 21px;
+}
+/*  */
+
+/* DIv stilus */
+div.keret{
+    border: black 3px double;
+    padding-right: 15px;    
+    padding-bottom: 15px;
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+/*  */
+
+/*  */
+tr:nth-child(even){
+    background-color: black;
+    color: aliceblue;
+}
+
+tr:nth-child(odd){
+    background-color:antiquewhite ;
+}
+/*  */
+
+/*  */
+.kep1,.kep2,.kep3,.kep4{
+    width: 300px;
+}
+
+.kep1{
+    position: relative;
+    left: 0px;
+    z-index: 2;
+}
+
+.kep2{
+    position: absolute;
+    left: 200px;
+    z-index: 1;
+}
+
+.kep3{
+    position: absolute;
+    left: 400px;
+    z-index: 2;
+}
+
+.kep4{
+    position: absolute;
+    left: 600px;
+    z-index: 1;
+}
+
+@media only screen and (min-width : 1000px) {
+    .kep1{
+        position: relative;
+    }
+    .kep2{
+        position: absolute;
+        left: 309px;
+        z-index: 1;
+    }
+    .kep3{
+        position: absolute;
+        left: 610px;
+        z-index: 2;
+    }
+    .kep4{
+        position: absolute;
+        left: 911px;
+        z-index: 1;
+    }
+}
+/*  */
+
+.dinokep{
+    width: 400px;
+}
+
+/*  */
+/* div.kep1{
+    min-height:200px;
+    background-image:
+      url('https://media.istockphoto.com/photos/business-man-pushing-large-stone-up-to-hill-business-heavy-tasks-and-picture-id825383494?k=20&m=825383494&s=612x612&w=0&h=tEqZ5HFZcM3lmDm_cmI7hOeceiqy9gYrkyLTTkrXdY4='),
+      url('https://media.istockphoto.com/photos/business-man-pushing-large-stone-up-to-hill-business-heavy-tasks-and-picture-id825383494?k=20&m=825383494&s=612x612&w=0&h=tEqZ5HFZcM3lmDm_cmI7hOeceiqy9gYrkyLTTkrXdY4=');
+    background-position: right bottom, right bottom;
+    background-blend-mode: overlay;
+    background-position-x: left, center;
+    background-repeat: repeat repeat;
+} */

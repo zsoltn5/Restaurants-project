@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/index.css" />
+        <title>Reszletek_Kepfeltoltes</title>
+        <script src='/script_ajax.js' type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <nav id="gyors_eleres">
+            <a href="../"><button>Main page</button> </a>
+            <a href="/uj_foglalas"><button>New reservation</button> </a>
+        </nav>
+
+        <div id="cim">A Vendeglo informacioi:</div>
+
+        <div class="list-container">
+            <div class="list-item" id = "list">
+                <div class="list-item-id"> ID:  <%= id %></div>
+                <div class="list-item-name"> Name:  <%= vendeglok.VNev %></div>
+                <div class="list-item-town"> City:  <%= vendeglok.Varos %></div>
+                <div class="list-item-street"> Street:  <%= vendeglok.Utca %></div>
+                <div class="list-item-number"> Number:  <%= vendeglok.Szam %></div>
+                <div class="list-item-tel"> Phone Number:  <%= vendeglok.Telefon %></div>
+                <div class="list-item-hours"> Open hours:  <%= vendeglok.Nyitas %> - <%= vendeglok.Zaras %></div>
+            </div>
+        </div>
+        <br>
+
+        <div id="cim">The reservations for the restaurant:</div>
+        <% if(foglalasok.length) {%>
+            <div id="tablediv">
+                <table class="list-container" align="center">
+                    <tr id="tr">
+                        <th>Name</th>
+                        <th>Hour</th>
+                    </tr>
+                    <% foglalasok.forEach((fogl) => { %>
+                        <tr id="tr/<%= fogl.FoglalasId %>">
+                            <td><%= fogl.Nev %></td>
+                            <td><%= fogl.Ora %></td>
+                            <td> ~ <button onclick="deleteFoglalas(`<%= fogl.FoglalasId %>`)">Delete</button></td>
+                        </tr>
+                    <% }) %>
+                </table>
+            </div>
+        <% } else { %>
+            <div id = "else_ag">Make a reservation, we don't have any yet</div>
+        <% } %>
+        <br>
+
+        <div id="cim">Pictures for the restaurant:</div>
+
+        <% if(kepek.length) {%>
+            <%kepek.forEach((k) => { %>
+                <img id="kepek" src="/uploadDir/<%= k.Kpath %>" alt="<%= k.Kpath %>"> 
+            <%}) %>
+        <% } else { %>
+            <div id = "else_ag">No pictures uploaded yet</div>
+        <% } %>
+        
+        <br>
+
+        <div id="cim">Upload pictures</div>
+
+        <form name="Kepek feltoltese" enctype="multipart/form-data" action="/form_kepek" method="POST">
+            <br>
+            <input type="number" id="form_kep_id" name="form_kep_id" value=<%= id%>>
+            <input type="file" id="kliens_file" name="kliens_file" required><br><br>
+            <input type="submit" id="form_submit2" value="SUBMIT"><br><br><br>
+        </form>
+        <script>
+            document.getElementById("form_kep_id").style.display = "none";
+        </script>
+        <footer><div id="f_footer"></div></footer>
+
+    </body>

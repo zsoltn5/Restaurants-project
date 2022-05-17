@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <title>Kitoltheto Form</title>
+    </head>
+    
+    <body>
+
+        <form name="Kitoltheto form">
+            <label>Vezeteknev</label><br>
+            <input type="text" id="form_vezeteknev" pattern="^[A-Z][a-z]*" onblur="valid();" required><br><br>
+            
+            <label>Keresztnev</label><br>
+            <input type="text" id="form_keresztnev" pattern="^[A-Z][a-z]*" onblur="valid();" required><br><br>
+
+            <label>Datum</label><br>
+            <input type="date" id="form_date" onblur="valid();" required><br><br>
+
+            <label>E-mail cim</label><br>
+            <input type="email" id="form_email" name="email" onblur="checkemail(this.value);" required><br>
+            <div id="email_">Nem megfelelo az email!</div><br>
+
+            <label>Kedvenc weboldal</label><br>
+            <input type="url" id="form_weboldal" onblur="checkurl(this.value);" required><br>
+            <div id="url_">Nem megfelelo az url!</div><br>
+
+            <input type="submit" id="form_submit" value="SUBMIT"><br><br><br>
+        </form>
+
+        <footer><div id="f_footer">f</div></footer>
+
+        <script src="form.js"></script>
+
+    </body>

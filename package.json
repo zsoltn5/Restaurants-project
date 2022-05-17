@@ -1,0 +1,32 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ubb-webprog/labs2022/lab-nzim2062.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ubb-webprog/labs2022/lab-nzim2062/issues"
+  },
+  "homepage": "https://gitlab.com/ubb-webprog/labs2022/lab-nzim2062#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-formidable": "^1.2.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
